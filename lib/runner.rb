@@ -1,33 +1,17 @@
-class Song
-
-  attr_accessor :artist
-  attr_reader :name
-
-  #*********************************#
-
-  ALL = []
-
-  def save
-    ALL << self
-  end
-
-  def self.all
-    ALL
-  end
-
-  #*********************************#
-
-  def initialize(name, genre)
-    @name = name # name of song
-    @genre = genre # genre of song
-  end
-
-  # tell the song
+require 'pry'
+require_relative '../lib/artist'
+require_relative '../lib/song'
+require_relative '../lib/genre'
+require_relative '../lib/doctor'
+require_relative '../lib/patient'
+require_relative '../lib/appointment'
 
 
-
-
-end
+jay_z = Artist.new("Jay-Z")
+rap = Genre.new("rap")
+ninety_nine_problems = Song.new("99 Problems", rap)
+jay_z.add_song(ninety_nine_problems)
+binding.pry
 
 
 # jay_z = Artist.new("Jay-Z")
